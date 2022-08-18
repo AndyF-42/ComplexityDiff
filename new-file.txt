@@ -1,0 +1,21 @@
+procedure myfunc5 in test2.c ended before final close bracket
+NOTE: proc handle_vq in file test.c line 31
+        nesting depth reached level 8
+==>     *seriously consider rewriting the procedure*.
+Complexity Scores
+Score | ln-ct | nc-lns| file-name(line): proc-name
+    1       5       4   test.c(156): vhost_test_stop
+    1       5       4   test.c(165): vhost_test_flush_vq
+    1       5       4   test.c(174): vhost_test_flush
+    1       9       7   test2.c(3): main
+    1      10       9   test.c(142): vhost_test_stop_vq
+    1      12      10   test.c(93): handle_vq_kick
+    1      15      12   test.c(183): vhost_test_release
+    2       9       9   test2.c(16): myfunc5
+    2      21      16   test.c(297): vhost_test_set_features
+    2      28      23   test.c(109): vhost_test_open
+    3      30      25   test.c(263): vhost_test_reset_owner
+    4      43      39   test.c(323): vhost_test_ioctl
+    4      57      40   test.c(202): vhost_test_run
+   20      58      51   test.c(31): handle_vq
+total nc-lns      253

@@ -1,0 +1,11 @@
+Score | ln-ct | nc-lns| file-name(line): proc-name
+    1       5       4   test.c(84): handle_vq_kick
+    1       7       6   test.c(119): vhost_test_stop_vq
+    1      12       9   test.c(145): vhost_test_release
+    1      14      13   test.c(236): vhost_test_set_features
+    1      21      17   test.c(93): vhost_test_open
+    2      20      19   test.c(212): vhost_test_reset_owner
+    3      47      34   test.c(161): vhost_test_run
+    4      36      36   test.c(255): vhost_test_ioctl
+    5      49      42   test.c(31): handle_vq
+total nc-lns      180
