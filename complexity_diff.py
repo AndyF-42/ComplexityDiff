@@ -3,10 +3,8 @@
 # Summary: Takes in two complexity text files and returns a summary of the differences.
 # Usage: "python complexity_diff.py {old file} {new file} {output file (optional)}"
 
-# DELETE THIS: questions - sorting ok?, remove unchanged?
 
 import sys
-import numpy
 
 
 def main(args):
@@ -40,37 +38,6 @@ def main(args):
     
     # Sorting
     sorted_complexities = sorted(complexities.items(), key=lambda kv: kv[1][1], reverse=True)
-
-    # # Compiling output
-    # output = ""
-    # for func in sorted_complexities:
-    #     if func[1][2] == "new" or func[1][2] == "old":
-    #         output += f"{func[0][0]} {func[0][1]} Only present in {func[1][2]}, complexity {max(func[1][0], func[1][1])}\n"
-    #     elif func[1][0] == func[1][1]:
-    #         output += f"{func[0][0]} {func[0][1]} Complexity unchanged at {func[1][0]}\n"
-    #     else:
-    #         output += f"{func[0][0]} {func[0][1]} Complexity {func[1][2]} from {func[1][0]} to {func[1][1]}\n"
-
-    # # Printing and writing to file
-    # print(output.strip())
-    # if len(args) == 3:
-    #     with open(args[2], 'w') as out:
-    #         out.write(output)
-
-    # # Compiling output
-    # output = numpy.empty([len(sorted_complexities), 2], dtype=object)
-    # for index, line in enumerate(sorted_complexities):
-    #     if line[1][2] == "new" or line[1][2] == "old":
-    #         output[index] = [f"{line[0][0]} {line[0][1]}", f"Only present in {line[1][2]}, complexity {max(line[1][0], line[1][1])}"]
-    #     elif line[1][0] == line[1][1]:
-    #         output[index] = [f"{line[0][0]} {line[0][1]}", f"Complexity unchanged at {line[1][0]}"]
-    #     else:
-    #         output[index] = [f"{line[0][0]} {line[0][1]}", f"Complexity {line[1][2]} from {line[1][0]} to {line[1][1]}"]
-
-    # # Printing and writing to file
-    # #print(output.strip())
-    # if len(args) == 3:
-    #     numpy.savetxt(args[2], output, fmt="%-35s")
 
     # Compiling output
     padding = max([len(line[0][0] + " " + line[0][1]) for line in sorted_complexities])
